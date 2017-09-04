@@ -1,4 +1,17 @@
+//Return the length of the longest word in the provided sentence.
 
+function findLongestWord(str) {
+  var longest = 0;
+  var arr = str.split(" ");
+  for (i=0;i<arr.length;i++){
+    if (arr[i].length>longest){
+      longest = arr[i].length;
+    }
+  }
+  return longest;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
 
 //Return true if the given string is a palindrome. Otherwise, return false.
 
