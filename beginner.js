@@ -1,3 +1,19 @@
+//Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+function chunkArrayInGroups(arr, size) {
+var divided = arr.length/size;
+ var newArr = [];
+  var count = 0;
+  var upCount = size;
+  for(i=0;i<divided;i++){
+    newArr.push(arr.slice(count,upCount));
+    count = count + size;
+    upCount = upCount + size;
+  }
+  return newArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
 //Return the length of the longest word in the provided sentence.
 
 function findLongestWord(str) {
