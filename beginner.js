@@ -90,3 +90,21 @@ function truncateString(str, num) {
 else{return str;}
 }
 truncateString("A-tisket a-tasket A green and yellow basket", 11);
+
+
+//this challenge asks for a function to return the largest number from each of a number of arrays. the largest numbers of each should be stored in their own, new arrays.
+function largestOfFour(arr) {
+ answerArr = [];
+  for (i=0;i<arr.length;i++){
+   let count = 0;
+    for (j=0;j<arr[i].length;j++){
+     
+    if (arr[i][j]>count){count = arr[i][j];}
+   }
+    answerArr.push(count);
+ }
+  return answerArr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
