@@ -1,3 +1,18 @@
+//check if all the letters in the second array are contained in the first
+function mutation(arr) {
+ var arrayA = arr[0].toLowerCase();
+  var arrayB = arr[1].toLowerCase();
+  for (i=0;i<arrayB.length;i++){
+    if (arrayA.indexOf(arrayB[i]) == -1){
+      return false;
+    }
+   
+  }
+   return true;
+}
+
+mutation(["hello", "hey"]);
+
 //Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
 function chunkArrayInGroups(arr, size) {
 var divided = arr.length/size;
