@@ -1,3 +1,20 @@
+//first argument is an array. eliminate any numbers in additional arguments from the array.
+function destroyer(arr) {
+  var originalArr = arguments[0];
+  var checkArr = [];
+  for (i=1;i<arguments.length;i++){
+    checkArr.push(arguments[i]);
+  }
+  
+  var newArr = originalArr.filter(function(num){
+    return checkArr.indexOf(num)==-1;
+  });
+  return newArr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
 //check if all the letters in the second array are contained in the first
 function mutation(arr) {
  var arrayA = arr[0].toLowerCase();
